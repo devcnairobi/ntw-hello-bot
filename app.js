@@ -1,5 +1,5 @@
-const http = require('http')
-const Bot = require('messenger-bot')
+const http = require('http');
+const Bot = require('messenger-bot');
 
 let bot = new Bot({
     token: process.env.PAGE_TOKEN || '',
@@ -15,11 +15,8 @@ bot.on('message', (payload, reply) => {
     console.log("message received");
     console.log(text);
 
-    reply({
-        text: 'This is me',
-        function(err) {
-            if (err) console.log(err);
-        }
+    reply({ text: 'This is me' }, function(err) {
+        if (err) console.log(err);
     });
 });
 
