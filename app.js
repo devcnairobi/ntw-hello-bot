@@ -12,10 +12,8 @@ bot.on('error', (err) => {
 
 bot.on('message', (payload, reply) => {
     let text = payload.message.text;
-    console.log("message received");
-    console.log(text);
 
-    reply({ text: 'This is me' }, function(err) {
+    reply({ text: 'This is me :)' }, function(err) {
         if (err) console.log(err);
     });
 });
